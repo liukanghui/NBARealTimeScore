@@ -2,9 +2,9 @@
 	"name": "NBARealTimeScore",
 	"displayName": "NBA real-time score",
 	"description": "实时获取当天NBA比赛比分，并显示在vscode下方状态栏左侧；更可以观看实时文字直播。你可以边搬砖边关注NBA",
-	"publisher": "liyangjj",
+	"publisher": "brainiac",
 	"icon": "images/icon.png",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"categories": [
 		"Other"
 	],
@@ -17,7 +17,7 @@
 		"real time"
 	],
 	"engines": {
-		"vscode": "^1.33.0"
+		"vscode": "^1.50.0"
 	},
 	"activationEvents": [
 		"onCommand:extension.NBARealTimeScore"
@@ -65,7 +65,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kevinLiJ/NBARealTimeScore.git"
+		"url": "https://github.com/fangguangyang/NBARealTimeScore.git"
 	},
 	"dependencies": {
 		"crawler": "^1.2.1"
