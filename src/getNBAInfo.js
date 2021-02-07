@@ -44,7 +44,7 @@ function getNBAInfo(callback) {
 				if (!isAllFinish) {
 					timer = setTimeout(() => {
 						A()
-					}, 3000)
+					}, 30000)
 				}
 			}
 		}])

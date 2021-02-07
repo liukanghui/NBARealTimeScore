@@ -36,7 +36,7 @@ function activate(context) {
 		if (matchesList.length !== 0 && Object.keys(getLivePagesInfo).length === 0) {
 			// 根据比赛列表初始化直播页
 			matchesList.map(match => {
-				getLivePagesInfo[match.label] = new getLivePage(match)
+				getLivePagesInfo[match.label] = new getLivePage(match, statusBarItem)
 			})
 		}
 		

@@ -14,7 +14,7 @@ const temptList = [
 ]
 
 module.exports = class getLivePage {
-    constructor(match) {
+    constructor(match, statusBarItem) {
         this.match = match
         this.url = match.liveUrl
         this.panelId = match.liveUrl.split('/').reverse()[0]
@@ -22,6 +22,7 @@ module.exports = class getLivePage {
         this.currentPanel = null
         this.timer = null
         this.isDisposed = false
+        this.statusBarItem = statusBarItem
     }
 
     start() {
@@ -91,10 +92,12 @@ module.exports = class getLivePage {
                         return
                     }
                     
+                    const currentText = $(".gamecenter_content_l .table_list_live:last-child table tr:first-child").text()
+                    this.statusBarItem.text = currentText.replace(/\n/g, ' ')
                     this.currentPanel.webview.html = this.generateHtml(liveHtml)
                     this.timer = setTimeout(() => {
                         this.setPanelHtml()
-                    }, 3000)
+                    }, 1000)
                 }
                 done()
             }
