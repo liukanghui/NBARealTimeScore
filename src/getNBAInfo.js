@@ -37,7 +37,7 @@ function getNBAInfo(callback) {
 					}
 					const matchesInfoStr = matchesInfoList.join('  ||  ')
 					// 把所有比赛的比分信息拼接成字符串，传给CB，用于显示在左下角菜单栏
-					callback(matchesInfoStr.length > 100 ? matchesInfoStr.slice(0,70) + '...' : matchesInfoStr)
+					callback(matchesInfoStr, matchesInfoStr.length > 30 ? matchesInfoStr.slice(0,30) + '...' : matchesInfoStr)
 				}
 				done()
 				// 如果比赛全部结束，则停止获取比赛信息
